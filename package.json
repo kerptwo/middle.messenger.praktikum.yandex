@@ -10,7 +10,7 @@
     "start": "npm run build && npm run preview"
   },
   "engines": {
-    "node": ">=16.0.0"
+    "node": ">=18.0.0"
   },
   "devDependencies": {
     "sass-embedded": "^1.83.1",
