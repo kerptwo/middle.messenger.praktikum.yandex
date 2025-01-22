@@ -22,8 +22,8 @@ npm run start — запуск билда и превью.
 
 ## Ссылки превью
 
-Login page - https://chatmau.netlify.app/
-Chat page - https://chatmau.netlify.app/chat
-Profile page - https://chatmau.netlify.app/profile
-Registration page - https://chatmau.netlify.app/registration
-Error page - https://chatmau.netlify.app/rn (Вместо "rn" может быть любой путь, кроме представленных выше)
+Login page - https://practicumsite.netlify.app/
+Chat page - https://practicumsite.netlify.app/chat
+Profile page - https://practicumsite.netlify.app/profile
+Registration page - https://practicumsite.netlify.app/registration
+Error page - https://practicumsite.netlify.app/rn (Вместо "rn" может быть любой путь, кроме представленных выше)
