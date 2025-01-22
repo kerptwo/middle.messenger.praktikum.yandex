@@ -22,4 +22,37 @@ import { router, initRouter } from './routes/router';
 document.addEventListener('DOMContentLoaded', () => {
   initRouter();
   router();
+
+  const listHTML = `
+  <nav>
+    <ul>
+      <li>
+        <a href="/">Логин</a>
+      </li>
+      <li>
+        <a href="/registration">Регистрация</a>
+      </li>
+      <li>
+        <a href="/chat">Чат</a>
+      </li>
+      <li>
+        <a href="/profile">Профиль</a>
+      </li>
+      <li>
+        <a href="/changeUserInfo">Смена данных</a>
+      </li>
+      <li>
+        <a href="/changePassword">Смена пароля</a>
+      </li>
+      <li>
+        <a href="/rn">Ошибка 404</a>
+      </li>
+    </ul> 
+  </nav>
+`;
+
+  const targetElement = document.querySelector('#listLink'); // Замените на ваш целевой элемент
+  if (targetElement) {
+    targetElement.innerHTML = listHTML;
+  }
 });

@@ -4,6 +4,8 @@ import chatTemplate from '../pages/Chat/Chat.hbs?raw';
 import loginTemplate from '../pages/Login/Login.hbs?raw';
 import registrationTemplate from '../pages/Registration/Registration.hbs?raw';
 import errorTemplate from '../pages/NotFound/NotFound.hbs?raw';
+import changePasswordTemplate from '../pages/ChangePassword/ChangePassword.hbs?raw';
+import changeUserInfoTemplate from '../pages/ChangeUserInfo/ChangeUserInfo.hbs?raw';
 
 interface Route {
   path: string;
@@ -15,6 +17,8 @@ const routes: Route[] = [
   { path: '/profile', template: profileTemplate },
   { path: '/registration', template: registrationTemplate },
   { path: '/chat', template: chatTemplate },
+  { path: '/changePassword', template: changePasswordTemplate },
+  { path: '/changeUserInfo', template: changeUserInfoTemplate },
 ];
 
 export function renderPage(templateContent: string, data: any = {}) {

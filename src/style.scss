@@ -1,4 +1,4 @@
-// подключаем компоненты 
+// подключаем компоненты
 @use "./components/UI/Input/input";
 @use "./components/UI/Button/button";
 @use "./components/UI/Link/link";
@@ -34,6 +34,16 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
-  height: 100vh;
+  overflow-y: auto; /* Разрешить вертикальную прокрутку */
+  min-height: 100vh; /* Позволить контейнеру расширяться */
+  box-sizing: border-box;
+}
+
+#listLink {
+  position: absolute;
+  top: 50px;
+  right: 20%;
+  padding: 20px;
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.14);
+  border-radius: 12px;
 }
