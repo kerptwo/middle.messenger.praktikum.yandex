@@ -1,0 +1,142 @@
+.chat-window {
+    // width: 100%;
+    position: relative;
+
+    &--clear {
+        color: rgba(153, 153, 153, 1);
+        position: absolute;
+        width: 100vw;
+        top: 50vh;
+        display: none;
+    }
+
+    &--active {
+        width: calc(100vw - 330px);
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 330px;
+
+        .chat-window__header {
+            border-bottom: 1px solid rgba(234, 234, 234, 1);
+            margin: 10px 20px 0;
+            padding-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            img {
+                background-color: rgba(239, 239, 239, 1);
+                height: 34px;
+                width: 34px;
+                border-radius: 100%;
+                margin-right: 10px;
+            }
+
+            button {
+                background-color: transparent;
+                border: none;
+                cursor: pointer;
+
+                img {
+                    background-color: transparent;
+                    height: 15px;
+                    margin-right: 0;
+                }
+            }
+
+            .header__contact-block {
+                display: flex;
+                align-items: center;
+
+                p {
+                    margin: 0;
+                }
+            }
+        }
+
+        .chat-window__body {
+            padding: 0 20px 30px 20px;
+
+            .data-messages {
+                text-align: center;
+
+                p {
+                    font-size: 12px;
+                    color: rgba(153, 153, 153, 1);
+                }
+            }
+
+            .message {
+                position: relative;
+                max-width: 45%;
+                width: auto;
+                padding: 11px;
+                border-radius: 12px;
+                margin-top: 10px;
+
+                p {
+                    margin: 0;
+                }
+
+                span {
+                    font-size: 9px;
+                    position: absolute;
+                    right: 11px;
+                    bottom: 11px;
+                }
+
+                &--contact {
+                    background-color: rgba(248, 248, 248, 1);
+                }
+
+                &--user {
+                    background-color: rgba(228, 237, 253, 1);
+                    position: absolute;
+                    right: 20px;
+
+                    span {
+                        color: rgba(51, 105, 243, 1);
+                        box-sizing: border-box;
+                        display: contents;
+                    }
+                }
+            }
+        }
+
+        .chat-window__footer {
+            width: calc(100vw - 370px);
+            border-top: 1px solid rgba(234, 234, 234, 1);
+            margin: 0 0px 11px 20px;
+            padding-top: 11px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: absolute;
+            bottom: 0;
+
+            input {
+                width: 100%;
+                padding: 10px 20px;
+                margin: 0 10px;
+                border-radius: 30px;
+                border: none;
+                background-color: rgba(239, 239, 239, 1);
+
+                &:focus-visible {
+                    outline: none;
+                }
+
+                &.navigation-page__header .searh-contact input:placeholder-shown {
+                    color: transparent;
+                }
+            }
+
+            button {
+                background-color: transparent;
+                border: none;
+                cursor: pointer;
+            }
+        }
+    }
+}

@@ -1,0 +1,59 @@
+.navigation-page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 310px;
+    height: 100vh;
+    background-color: rgba(251, 251, 251, 1);
+    padding: 21px 10px 0 10px;
+    color: rgba(153, 153, 153, 1);
+    overflow: auto;
+
+    &__header {
+        border-bottom: 1px solid rgba(234, 234, 234, 1);
+        padding-bottom: 14px;
+
+        .link-profile {
+            text-align: right;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+
+            a {
+                color: rgba(153, 153, 153, 1);
+                margin-right: 8px;
+            }
+
+            svg {
+            }
+        }
+
+        .searh-contact {
+            input {
+                margin-top: 23px;
+                width: -webkit-fill-available;
+                height: 32px;
+                background-color: rgba(239, 239, 239, 1);
+                border: none;
+                border-radius: 5px;
+                padding: 0 4px;
+                position: relative;
+
+                &::placeholder {
+                    text-align: center;
+                }
+
+                &:focus-visible {
+                    outline: none;
+                }
+
+                &:placeholder-shown {
+                    color: transparent;
+                }
+            }
+        }
+    }
+
+    &__body {
+    }
+}

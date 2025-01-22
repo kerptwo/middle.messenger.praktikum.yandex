@@ -1,0 +1,12 @@
+<div class="login-page">
+  <h1>Вход</h1>
+  <form id="login-form">
+    {{> input id="username" label="Логин" type="text" placeholder="ivanivanov" }}
+    {{> input id="password" label="Пароль" type="password" placeholder="••••••••••••" }}
+
+    <div class="login-page__button-block">
+      {{> button id="button" text="Авторизоваться" }}
+      {{> link link="#" textLink="Нет аккаунта?" }}
+    </div>
+  </form>
+</div>
