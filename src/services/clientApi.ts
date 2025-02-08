@@ -106,3 +106,5 @@ class HttpClient {
     return this.request<T>("DELETE", url, data, headers);
   }
 }
+
+console.log(HttpClient);
