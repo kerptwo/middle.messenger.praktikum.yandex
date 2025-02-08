@@ -6,11 +6,14 @@
 @use "./components/common/Navigation/navigation";
 @use "./components/common/ChatWindoow/chatWindoow";
 @use "./components/UI/UserInfoRow/userInfoRow";
+@use "./components/UI/Avatar/avatar";
 
 // подключаем страницы
 @use "./pages/Login/login";
 @use "./pages/Chat/chat";
 @use "./pages/Profile/profile";
+@use "./pages/NotFound/NotFound.scss";
+@use "./pages/ServerError/ServerError.scss";
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;

@@ -107,7 +107,9 @@
         .chat-window__footer {
             width: calc(100vw - 370px);
             border-top: 1px solid rgba(234, 234, 234, 1);
-            margin: 0 0px 11px 20px;
+            background-color: #ffffff;
+            margin: 0 0px 0 20px;
+            padding-bottom: 11px;
             padding-top: 11px;
             display: flex;
             justify-content: space-between;
@@ -115,20 +117,24 @@
             position: absolute;
             bottom: 0;
 
-            input {
-                width: 100%;
-                padding: 10px 20px;
-                margin: 0 10px;
-                border-radius: 30px;
-                border: none;
-                background-color: rgba(239, 239, 239, 1);
+            .main-input {
+                display: contents;
 
-                &:focus-visible {
-                    outline: none;
-                }
+                input {
+                    width: 100%;
+                    padding: 10px 20px;
+                    margin: 0 10px;
+                    border-radius: 30px;
+                    border: none;
+                    background-color: rgba(239, 239, 239, 1);
 
-                &.navigation-page__header .searh-contact input:placeholder-shown {
-                    color: transparent;
+                    &:focus-visible {
+                        outline: none;
+                    }
+
+                    &.navigation-page__header .searh-contact input:placeholder-shown {
+                        color: transparent;
+                    }
                 }
             }
 
