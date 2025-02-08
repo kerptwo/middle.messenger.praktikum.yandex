@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
   </nav>
 `;
 
-  const targetElement = document.querySelector("#listLink");
+  const targetElement = document.querySelector("#list-link");
   if (targetElement) {
     targetElement.innerHTML = listHTML;
   }
