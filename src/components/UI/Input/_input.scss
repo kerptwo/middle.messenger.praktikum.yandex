@@ -1,0 +1,24 @@
+.main-input {
+    label {
+        color: rgba(153, 153, 153, 1);
+        font-size: 9px;
+        font-weight: 500;
+        line-height: 9px;    
+    }
+    
+    input {
+        border: none;
+        border-bottom: 1px solid rgba(51, 105, 243, 1);
+        width: 100%;
+        margin-top: 1px;
+        padding: 7px 0;
+        
+        &::placeholder {
+            color: rgba(30, 30, 30, 1);            
+        }
+
+        &:focus-visible {
+            outline: none;
+        }
+    }
+}

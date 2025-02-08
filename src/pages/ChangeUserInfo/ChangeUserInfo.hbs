@@ -1,0 +1,17 @@
+<div>
+    <div>
+        {{!-- Сделать компонент avatar и вставить сюды --}}
+        Avatar
+    </div>
+    {{!-- В данный момент отсутствуют стили и компонент создан как заглушка. В будущем буду делать или отдельный
+    компонент или буду использовать существующий компонент input и делать его "разновидности" --}}
+    {{!-- Так же возможно страница будет в Profile, но разрулена через руты --}}
+    <form>
+        {{> input id="email" label="Почта" type="email" placeholder="pochta@yandex.ru" }}
+        {{> input id="login" label="Логин" type="text" placeholder="ivanivanov" }}
+        {{> input id="first_name" label="Имя" type="text" placeholder="Иван" }}
+        {{> input id="second_name" label="Фамилия" type="text" placeholder="Иванов" }}
+        {{> input id="nickname" label="Имя в чате" type="text" placeholder="Иван" }}
+        {{> input id="phone" label="Телефон" type="tel" placeholder="+7 (909) 967 30 30" }}
+    </form>
+</div>
