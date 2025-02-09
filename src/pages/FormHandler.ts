@@ -1,4 +1,4 @@
-import { validateField, handleFieldBlur } from "../components/UI/Input/input";
+import { validateField, handleFieldBlur } from "../components/UI/Input/inputValidation";
 
 function handleFormSubmit(event: Event): void {
   event.preventDefault();
