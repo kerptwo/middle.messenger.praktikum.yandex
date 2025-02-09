@@ -9,17 +9,20 @@ export default class Navigation extends Block {
   }
 
   afterRender(): void {
-    const linkProfileContainer = this.getContent().querySelector("#link-profile-container");
+    const linkProfileContainer = this.getContent().querySelector(
+      "#link-profile-container"
+    );
     if (linkProfileContainer) {
       linkProfileContainer.innerHTML = "";
       const profileLink = new Link({
         link: "/profile",
-        text: "Профиль"
+        text: "Профиль",
       });
       linkProfileContainer.appendChild(profileLink.render());
     }
 
-    const contactContainer = this.getContent().querySelector("#contact-container");
+    const contactContainer =
+      this.getContent().querySelector("#contact-container");
     if (contactContainer) {
       contactContainer.innerHTML = "";
       const contactComponent = new Contact();
