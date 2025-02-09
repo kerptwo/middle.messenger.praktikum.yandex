@@ -4,7 +4,7 @@ import { handleFieldBlur } from "./inputValidation";
 
 export interface InputProps {
   id: string;
-  label: string;
+  label?: string;
   type: string;
   placeholder: string;
   events?: { [key: string]: (event: Event) => void };

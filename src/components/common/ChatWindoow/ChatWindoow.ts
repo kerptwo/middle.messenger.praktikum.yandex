@@ -12,7 +12,9 @@ export default class ChatWindow extends Block {
     const form = this.getContent().querySelector("#send-message");
     if (form) {
       // Находим контейнер для поля ввода сообщения внутри формы
-      const messageInputContainer = form.querySelector("#message-input-container");
+      const messageInputContainer = form.querySelector(
+        "#message-input-container"
+      );
       if (messageInputContainer) {
         messageInputContainer.innerHTML = "";
         // Создаем экземпляр компонента Input для сообщения
