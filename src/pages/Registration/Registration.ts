@@ -3,10 +3,14 @@ import registrationTemplate from "./Registration.hbs?raw";
 import Button from "../../components/UI/Button/Button";
 import Input from "../../components/UI/Input/input";
 import Link from "../../components/UI/Link/Link";
+import { handleFormSubmit } from "../FormHandler";
 
 export default class RegistrationPage extends Block {
   constructor(props: Record<string, any> = {}) {
-    super(registrationTemplate, props);
+    super(registrationTemplate, {
+      ...props,
+      events: { submit: handleFormSubmit },
+    });
   }
 
   afterRender(): void {
@@ -19,7 +23,6 @@ export default class RegistrationPage extends Block {
         label: "Почта",
         type: "email",
         placeholder: "pochta@yandex.ru",
-        errorMessage: "",
       });
       emailContainer.appendChild(emailInput.render());
     }
@@ -33,7 +36,6 @@ export default class RegistrationPage extends Block {
         label: "Логин",
         type: "text",
         placeholder: "ivanivanov",
-        errorMessage: "",
       });
       loginContainer.appendChild(loginInput.render());
     }
@@ -47,7 +49,6 @@ export default class RegistrationPage extends Block {
         label: "Имя",
         type: "text",
         placeholder: "Иван",
-        errorMessage: "",
       });
       firstNameContainer.appendChild(firstNameInput.render());
     }
@@ -61,7 +62,6 @@ export default class RegistrationPage extends Block {
         label: "Фамилия",
         type: "text",
         placeholder: "Иванов",
-        errorMessage: "",
       });
       secondNameContainer.appendChild(secondNameInput.render());
     }
@@ -75,7 +75,6 @@ export default class RegistrationPage extends Block {
         label: "Телефон",
         type: "tel",
         placeholder: "+7 (909) 967 30 30",
-        errorMessage: "",
       });
       phoneContainer.appendChild(phoneInput.render());
     }
@@ -89,7 +88,6 @@ export default class RegistrationPage extends Block {
         label: "Пароль",
         type: "password",
         placeholder: "••••••••••••",
-        errorMessage: "",
       });
       passwordContainer.appendChild(passwordInput.render());
     }
@@ -103,7 +101,6 @@ export default class RegistrationPage extends Block {
         label: "Пароль (ещё раз)",
         type: "password",
         placeholder: "••••••••••••",
-        errorMessage: "",
       });
       passwordRepeatContainer.appendChild(passwordRepeatInput.render());
     }

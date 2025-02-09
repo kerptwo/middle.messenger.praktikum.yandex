@@ -3,10 +3,16 @@ import loginTemplate from "./Login.hbs?raw";
 import Button from "../../components/UI/Button/Button";
 import Input from "../../components/UI/Input/input";
 import Link from "../../components/UI/Link/Link";
+import { handleFormSubmit } from "../FormHandler";
 
 export default class LoginPage extends Block {
   constructor(props: Record<string, any> = {}) {
-    super(loginTemplate, props);
+    super(loginTemplate, {
+      ...props,
+      events: {
+        submit: handleFormSubmit,
+      },
+    });
   }
 
   afterRender(): void {
@@ -50,7 +56,7 @@ export default class LoginPage extends Block {
     if (linkContainer) {
       const loginLink = new Link({
         link: "#",
-        text: "Нет аккаунта?",
+        textLink: "Нет аккаунта?",
       });
       linkContainer.appendChild(loginLink.render());
     }

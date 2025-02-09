@@ -3,10 +3,11 @@ import template from "./ChangePassword.hbs?raw";
 import Avatar from "../../components/UI/Avatar/Avatar";
 import Input from "../../components/UI/Input/input";
 import Button from "../../components/UI/Button/Button";
+import { handleFormSubmit } from "../FormHandler";
 
 export default class ChangePasswordPage extends Block {
   constructor(props: Record<string, any> = {}) {
-    super(template, props);
+    super(template, { ...props, events: { submit: handleFormSubmit } });
   }
 
   afterRender(): void {
@@ -32,9 +33,7 @@ export default class ChangePasswordPage extends Block {
         id: "oldPassword",
         label: "Старый пароль",
         type: "password",
-        name: "oldPassword",
         placeholder: "••••••••••••",
-        errorMessage: "",
       });
       oldPasswordContainer.appendChild(oldPasswordInput.render());
     }
@@ -47,9 +46,7 @@ export default class ChangePasswordPage extends Block {
         id: "newPassword",
         label: "Новый пароль",
         type: "password",
-        name: "newPassword",
         placeholder: "••••••••••••",
-        errorMessage: "",
       });
       newPasswordContainer.appendChild(newPasswordInput.render());
     }
@@ -62,9 +59,7 @@ export default class ChangePasswordPage extends Block {
         id: "newPasswordRepeat",
         label: "Повторите новый пароль",
         type: "password",
-        name: "newPasswordRepeat",
         placeholder: "••••••••••••",
-        errorMessage: "",
       });
       newPasswordRepeatContainer.appendChild(newPasswordRepeatInput.render());
     }
@@ -72,11 +67,11 @@ export default class ChangePasswordPage extends Block {
     const buttonContainer =
       this.getContent().querySelector("#button-container");
     if (buttonContainer) {
-      const loginButton = new Button({
-        id: "login-button",
+      const changePasswordButton = new Button({
+        id: "change-password-button",
         text: "Сохранить",
       });
-      buttonContainer.appendChild(loginButton.render());
+      buttonContainer.appendChild(changePasswordButton.render());
     }
   }
 }

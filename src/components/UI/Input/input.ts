@@ -2,16 +2,25 @@ import Block from "../../Block";
 import templateInput from "./Input.hbs?raw";
 import { handleFieldBlur } from "./inputValidation";
 
-export default class Input extends Block {
-  constructor(props: Record<string, any> = {}) {
-    super(templateInput, props);
-    this.initEvents();
-  }
+export interface InputProps {
+  id: string;
+  label: string;
+  type: string;
+  placeholder: string;
+  events?: { [key: string]: (event: Event) => void };
+}
 
-  private initEvents(): void {
-    const inputElement = this.getContent().querySelector("input");
-    if (inputElement) {
-      inputElement.addEventListener("blur", handleFieldBlur);
-    }
+export default class Input extends Block {
+  constructor(props: InputProps) {
+    const defaultEvents = { focusout: handleFieldBlur };
+    const mergedProps = {
+      ...props,
+      events: {
+        ...defaultEvents,
+        ...(props.events || {}),
+      },
+    };
+
+    super(templateInput, mergedProps);
   }
 }

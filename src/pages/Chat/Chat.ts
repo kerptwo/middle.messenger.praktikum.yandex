@@ -2,10 +2,16 @@ import Block from "../../components/Block";
 import template from "./Chat.hbs?raw";
 import Navigation from "../../components/common/Navigation/Navigation";
 import ChatWindow from "../../components/common/ChatWindoow/ChatWindoow";
+import { handleFormSubmit } from "../FormHandler";
 
 export default class ChatPage extends Block {
   constructor(props: Record<string, any> = {}) {
-    super(template, props);
+    super(template, {
+      ...props,
+      events: {
+        submit: handleFormSubmit,
+      },
+    });
   }
 
   afterRender(): void {
