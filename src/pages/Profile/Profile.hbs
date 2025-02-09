@@ -2,27 +2,16 @@
     <button class="profile-page__button-back">
         <img src="/icon-send-message.svg" alt="icon-back">
     </button>
-    <div class="profile-page__avatar-block">
-        <button>
-            <img src="/icon-avatar.svg" alt="avatar">
-        </button>
-    </div>
+    <div id="avatar-container"></div>
+
     <div class="profile-page__main-information">
         <div class="main-information__name">
             <h3>Иван</h3>
         </div>
-        <div>
-            {{> userInfoRow title="Почта" value="pochta@yandex.ru" }}
-            {{> userInfoRow title="Логин" value="ivanivanov" }}
-            {{> userInfoRow title="Имя" value="Иван" }}
-            {{> userInfoRow title="Фамилия" value="Иванов" }}
-            {{> userInfoRow title="Имя в чате" value="Иван" }}
-            {{> userInfoRow title="Телефон" value="+7 (909) 967 30 30" }}
-        </div>
+        <div id="user-info-rows-container"></div>
     </div>
+
     <div class="profile-page__button-block">
-        {{> link link="#" textLink="Изменить данные" }}
-        {{> link link="#" textLink="Изменить пароль" }}
-        {{> link link="#" textLink="Выйти" }}
-    </div>
+        <div class="profile-page__button-block" id="profile-links-container"></div>
+    </div>  
 </main>
