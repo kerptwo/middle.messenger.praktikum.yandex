@@ -1,0 +1,22 @@
+{
+  "ignoreUnknownRules": true,
+  "extends": "stylelint-config-standard-scss",
+  "customSyntax": "postcss-scss",
+  "rules": {
+    "color-hex-alpha": null
+  },
+  "overrides": [
+    {
+      "files": ["**/*.scss"],
+      "rules": {
+        "scss/load-partial-extension": null,
+        "value-keyword-case": null,
+        "selector-class-pattern": null,
+        "length-zero-no-unit": null
+      }
+    }
+  ],
+  "ignoreFiles": [
+    "build/*"
+  ]
+}

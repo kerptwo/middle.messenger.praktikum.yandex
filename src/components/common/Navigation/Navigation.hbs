@@ -1,16 +1,12 @@
 <div class="navigation-page">
-    <div class="navigation-page__header">
-        <div class="link-profile">
-            {{> link link="#" textLink="Профиль" }}
-            <img src="/arrow-right.svg" alt="icon-arrow-right">
-        </div>
+  <div class="navigation-page__header">
+    <div class="link-profile" id="link-profile-container"></div>
 
-        <form class="searh-contact">
-            <input type="text" placeholder="Поиск">
-        </form>
-    </div>
+    <form class="searh-contact">
+      <input type="text" placeholder="Поиск" />
+    </form>
+    
+  </div>
 
-    <div class="navigation-page__body">
-        {{> contact }}
-    </div>
+  <div class="navigation-page__body" id="contact-container"></div>
 </div>

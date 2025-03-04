@@ -16,10 +16,6 @@ npm run build — сборка стабильной версии.
 npm run preview — превью последней версии билда.
 npm run start — запуск билда и превью.
 
-
-Привет тому, кто чиитает этот текст! 
-Некоторые элементы (модальные окна и смена данных в профиле) не сверстаны намеренно, т.к. будут делаться в процессе написания следующего спринта (Кроме страницы 404, там пока что просто "заглушка" без стилей).
-
 ## Ссылки превью
 
 Login page - https://practicumsite.netlify.app/
@@ -27,3 +23,15 @@ Chat page - https://practicumsite.netlify.app/chat
 Profile page - https://practicumsite.netlify.app/profile
 Registration page - https://practicumsite.netlify.app/registration
 Error page - https://practicumsite.netlify.app/rn (Вместо "rn" может быть любой путь, кроме представленных выше)
+
+## Инструменты для контроля качества кода
+
+- **ESLint Airbnb** — для обнаружения ошибок typescript.  
+  Проверить код можно командами:
+  node_modules/.bin/eslint . 
+  node_modules/.bin/eslint . -f table
+
+  Исправить код можно командой:
+  node_modules/.bin/eslint . --fix 
+
+- **stylelint** — для анализировать стилей

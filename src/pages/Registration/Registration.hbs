@@ -1,18 +1,16 @@
 <main class="login-page">
-    <h1>Регистрация</h1>
-
-    <form id="registration-form">
-        {{> input id="email" label="Почта" type="email" placeholder="pochta@yandex.ru" }}
-        {{> input id="login" label="Логин" type="text" placeholder="ivanivanov" }}
-        {{> input id="first_name" label="Имя" type="text" placeholder="Иван" }}
-        {{> input id="second_name" label="Фамилия" type="text" placeholder="Иванов" }}
-        {{> input id="phone" label="Телефон" type="tel" placeholder="+7 (909) 967 30 30" }}
-        {{> input id="password" label="Пароль" type="password" placeholder="••••••••••••" }}
-        {{> input id="passwordRepeat" label="Пароль (ещё раз)" type="password" placeholder="••••••••••••" }}
-
-        <div class="login-page__button-block">
-            {{> button id="button" text="Зарегистрироваться" }}
-            {{> link link="#" textLink="Войти" }}
-        </div>
-    </form>
+  <h1>Регистрация</h1>
+  <form id="registration-form">
+    <div id="email-input-container"></div>
+    <div id="login-input-container"></div>
+    <div id="first_name-input-container"></div>
+    <div id="second_name-input-container"></div>
+    <div id="phone-input-container"></div>
+    <div id="password-input-container"></div>
+    <div id="passwordRepeat-input-container"></div>
+    <div class="login-page__button-block">
+      <div class="registration-page__button-block" id="button-container"></div>
+      <div id="link-container"></div>
+    </div>
+  </form>
 </main>

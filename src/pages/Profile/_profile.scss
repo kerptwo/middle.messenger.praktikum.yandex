@@ -2,38 +2,18 @@
     margin-top: 60px;
 
     &__button-back {
-        background-color: rgba(251, 251, 251, 1);
+        background-color: rgb(251 251 251 / 100%);
         border: none;
         cursor: pointer;
         position: absolute;
         top: 0px;
         left: 0;
         height: 100vh;
-        border-right: 1px solid rgba(234, 234, 234, 1);
+        border-right: 1px solid rgb(234 234 234 / 100%);
         padding: 0 18px;
 
         img {
             transform: rotate(180deg);
-        }
-    }
-
-    &__avatar-block {
-        display: flex;
-        justify-content: center;
-        button {
-            background-color: rgba(239, 239, 239, 1);
-            border-radius: 100%;
-            width: 130px;
-            height: 130px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: none;
-
-            img {
-                width: 40px;
-                height: 40px;
-            }
         }
     }
 
@@ -50,7 +30,7 @@
         margin-top: 60px;
 
         .link-component {
-            border-bottom: 1px solid rgba(234, 234, 234, 1);
+            border-bottom: 1px solid rgb(234 234 234 / 100%);
             width: 40vw;
             padding: 10px 0;
             font-weight: 500;
@@ -59,7 +39,7 @@
                 border-bottom: none;
 
                 a {
-                    color: rgba(255, 0, 0, 1);
+                    color: rgb(255 0 0 / 100%);
                 }
             }
         }
